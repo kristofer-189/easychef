@@ -5,16 +5,17 @@ import java.util.ArrayList;
 
 
 public class Food implements Serializable {
-    private String name, type, description;
+    private String name, type, description, difficulty;
     private ArrayList<String> ingredients;
     private int likes, image;
     private Recipe recipes;
 
-    public Food(String name, String type, String description, ArrayList<String> ingredients, int likes, Recipe recipes, int image) {
+    public Food(String name, String type, String description, String difficulty,  ArrayList<String> ingredients, int likes, Recipe recipes, int image) {
         this.name = name;
         this.type = type;
         this.description = description;
         this.ingredients = ingredients;
+        this.difficulty = difficulty;
         this.likes = likes;
         this.recipes = recipes;
         this.image = image;
@@ -74,5 +75,13 @@ public class Food implements Serializable {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
     }
 }
