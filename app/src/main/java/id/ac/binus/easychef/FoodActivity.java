@@ -47,7 +47,6 @@ public class FoodActivity extends AppCompatActivity {
             Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT).show();
         });
         startBtn.setOnClickListener(e -> {
-            Toast.makeText(this, "Start", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(FoodActivity.this, RecipeActivity.class);
             intent.putExtra("recipe", food.getRecipes());
             startActivity(intent);
