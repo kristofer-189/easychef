@@ -64,7 +64,7 @@
             android:layout_weight="1"
             android:ems="16"
             android:inputType="textPersonName"
-            android:text="Search" />
+            android:hint="Search"/>
 
         <ImageButton
             android:id="@+id/searchBtn"

@@ -35,7 +35,6 @@ public class FoodActivity extends AppCompatActivity {
         IngredientsCarouselAdapter adapter = new IngredientsCarouselAdapter(food.getIngredients());
         view.setAdapter(adapter);
         view.setLayoutManager(new LinearLayoutManager(this));
-
         setButtonAction();
     }
 
@@ -49,6 +48,9 @@ public class FoodActivity extends AppCompatActivity {
         });
         startBtn.setOnClickListener(e -> {
             Toast.makeText(this, "Start", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(FoodActivity.this, RecipeActivity.class);
+            intent.putExtra("recipe", food.getRecipes());
+            startActivity(intent);
         });
     }
 

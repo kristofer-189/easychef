@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeActivity">
+
+    <ImageButton
+        android:id="@+id/recipe_backBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/image_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="Back" />
+
+    <TextView
+        android:id="@+id/recipe_countTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/recipe_nextBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="@+id/recipe_countTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recipe_countTxt"
+        app:layout_constraintTop_toTopOf="@+id/recipe_countTxt" />
+
+    <Button
+        android:id="@+id/recipe_prevBtn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Previous"
+        app:layout_constraintBottom_toBottomOf="@+id/recipe_countTxt"
+        app:layout_constraintEnd_toStartOf="@+id/recipe_countTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recipe_countTxt" />
+
+    <VideoView
+        android:id="@+id/recipe_videoVideo"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_margin="24dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_backBtn" />
+
+    <TextView
+        android:id="@+id/recipe_descTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/recipe_countTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipe_videoVideo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

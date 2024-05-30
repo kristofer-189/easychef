@@ -3,21 +3,21 @@ package id.ac.binus.easychef;
 import java.io.Serializable;
 
 public class RecipeStep implements Serializable {
-    private int stepnum, video;
+    private int step, video;
     private String description;
 
     public RecipeStep(int stepnum, String description, int video) {
-        this.stepnum = stepnum;
+        this.step = stepnum;
         this.description = description;
         this.video = video;
     }
 
-    public int getStepnum() {
-        return stepnum;
+    public int getStep() {
+        return step;
     }
 
-    public void setStepnum(int stepnum) {
-        this.stepnum = stepnum;
+    public void setStep(int step) {
+        this.step = step;
     }
 
     public String getDescription() {

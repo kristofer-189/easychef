@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         view.setAdapter(adapter);
-        view.setLayoutManager(new LinearLayoutManager(this));
+        view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         searchBtn = findViewById(R.id.searchBtn);
         searchBtn.setOnClickListener(e -> {
@@ -43,10 +43,14 @@ public class MainActivity extends AppCompatActivity {
     private void set_foods() {
         foodList = new ArrayList<>();
 
+        // setFood_1001();
+
+        // Fried Rice
+
         // Spaghetti
         ArrayList<RecipeStep> recipeSteps = new ArrayList<>();
-        recipeSteps.add(new RecipeStep(1, "Cook the spaghetti", -1));
-        recipeSteps.add(new RecipeStep(2, "Done", -1));
+        recipeSteps.add(new RecipeStep(1, "Cook the spaghetti", R.raw.recipe_1002_1));
+        recipeSteps.add(new RecipeStep(2, "Done", R.raw.recipe_1002_1));
         Recipe recipe = new Recipe(2, recipeSteps);
         ArrayList<String> ingredients = new ArrayList<>();
         ingredients.add("400g of spaghetti");
@@ -56,5 +60,10 @@ public class MainActivity extends AppCompatActivity {
         foodList.add(food);
         food = new Food("Spaghetti", "Pasta", "Spaghetti with Marinara Sauce", "Easy", ingredients, 10, recipe, R.drawable.thumb_1002);
         foodList.add(food);
+    }
+
+    private void setFood_1001() {
+        ArrayList<RecipeStep> recipeSteps = new ArrayList<>();
+        recipeSteps.add(new RecipeStep(0, "", 0));
     }
 }
